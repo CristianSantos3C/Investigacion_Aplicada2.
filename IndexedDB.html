@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <link rel="icon" type="image/x-icon" href="img/logo.png" />
+        <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+        
+        <link href="css/stiloprin.css" rel="stylesheet" />
+        <title>Investigación Aplicada 2</title>
+    </head>
+    <body id="page-top">
+       
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand" href="#page-top"><h1>DAW</h1></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false">
+                    Menú
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="../DAW/SessionStorage.html">SessionStorage</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../DAW/LocalStorage.html">LocalStorage</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#services">Ejemplo</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../DAW/index.html">pag PRINCIPAL</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+      
+        <header class="masthead">
+            <div class="container">
+                <hr class="parq">
+                <div class="masthead-heading text-uppercase">IndexedDB</div>
+                
+            </div>
+        </header>
+
+        <section class="page-section">
+            <div class="container">
+                <div class="text-center">
+                <div class="row text-center">
+                    <h2>¿Qué es el IndexedDB?</h2>
+                    <br>
+                    <p> IndexedDB es un sistema de base de datos transaccionales, capaz de almacenar información estructurada dentro del navegador. 
+                        IndexedDB, a diferencia de otras opciones que tenemos para el almacenamiento en el navegador, es perfecta para almacenar grandes
+                        cantidades de datos, como por ejemplo catálogos, u otros que necesitan además una forma de búsqueda rápida de la información.
+                    </p>
+                    <p>
+                        Una característica que lo hace perfecto para ser usado con Progressive Web Apps es que es Asíncrono, por lo que el sistema de 
+                        acceso a la información mediante Javascript no es bloqueante para el navegador.
+                    </p>
+                </div>
+
+                <br>
+                <img class="logoo"src="img/db.png" width="500" height="250">
+                <br>
+                <br>
+                <h2>¿Cómo funciona Indexeddb?</h2>
+
+                <p>
+                    Este estándar es una interfaz configurada en el navegador, donde se pueden ir almacenando directamente los datos de las páginas 
+                    web mediante JavaScript. Es posible establecer una base de datos para cada sitio web, que solo tendrá permiso para acceder a su 
+                    correspondiente IndexedDB (abreviación de Indexed Database API). De esta manera, se preserva la confidencialidad de los datos. 
+                    Las bases de datos se estructuran en base a almacenes de objetos que permiten guardar diversos formatos: cadenas (strings), 
+                    cifras, objetos, fechas y matrices (arrays).
+                </p>
+
+                <p>
+                    IndexedDB no es una base de datos relacional, sino un sistema tabular basado en índices. De hecho, se trata de una base de datos NoSQL,
+                     como también lo es por ejemplo MongoDB. Los registros siempre se definen en pares de clave y valor, en los que el valor constituye un 
+                     objeto y la clave, la característica del mismo. A esto se le añaden los índices, que permiten buscar rápidamente los datos, las 
+                     operaciones siempre se realizan en forma de transacciones: cada procedimiento de escritura, lectura o modificación se integra en una 
+                     transacción, lo que garantiza que los cambios en la base de datos se realicen completamente o no se realicen en absoluto.
+                </p>
+                <br>
+                <h2>Definiciones básicas a tomar en cuenta:</h2>
+                <br>
+
+                <p>
+                    • <b>Esquema:</b> El esquema de su base de datos se refiere a la forma de sus datos. Por ejemplo, usaremos una base de datos que realiza un 
+                    seguimiento de los automóviles en nuestro ejemplo. Hay infinitas piezas de información diferentes que podría imaginar que se relacionan 
+                    con los automóviles: color, marca, modelo, condición, acabado, VIN, año, etc., además hay que identificar los objetos de forma diferente
+                     en la base de datos.
+                </p>
+                <p>
+                    • <b>Base de datos:</b> Una base de datos es el nivel más alto de IndexedDB. Una base de datos contiene uno o más almacenes de objetos, IndexedDB 
+                    puede tener una o más bases de datos. Por lo general, creará una base de datos por aplicación web.
+                </p>
+                
+                <p>
+                    • <b>Índice:</b> Al final de un libro, un índice es un mapa de palabras a números de página. Le permiten a usted, como lector, tener la 
+                    capacidad de encontrar rápidamente los conceptos que está buscando sin tener que hojear el libro página por página. El concepto es
+                     exactamente el mismo para las computadoras. Al mirar una base de datos enorme, sin ningún índice, su búsqueda comenzará desde el 
+                     principio y mirará absolutamente todo hasta que encuentre lo que está buscando. Agregar un índice creará una estructura en la memoria 
+                     que hará que esas búsquedas sean más rápidas y fáciles. Un índice ocupa espacio en la memoria, por lo que a menudo se considera una 
+                     compensación de espacio frente a velocidad. En la mayoría de los casos, esa compensación bien vale la pena.
+                </p>
+                
+                <p>
+                    • <b>Transacciones:</b> El término transacción es genérico, usado por muchos tipos de bases de datos. Una transacción es un grupo de operaciones 
+                    cuyos resultados están vinculados: todas deben ser exitosas o todas fallar.
+                    <br><br>
+                    Para comprender por qué son necesarias las transacciones, el ejemplo más común es la transferencia de dinero entre cuentas en una base de datos
+                     bancaria. Una operación de transferencia incluye tanto removemoney de una cuenta como addmoney a otra. Si la operación addmoney falla por
+                      algún motivo, también necesita que la operación removemoney falle, de lo contrario, terminaría con un escenario bastante desagradable en 
+                      el que el dinero simplemente "se ha ido".
+                </b> 
+                </p>
+
+                <p>
+                    • <b>Cursor: </b>Un cursor representa su posición actual al ver los datos en su base de datos. Los cursores en IndexedDB se pueden usar en almacenes 
+                    de objetos completos o incluso en índices que se han limitado a cierto tipo de documentos. Ofrecen la posibilidad de iterar de un documento al 
+                    siguiente dentro de la base de datos en lugar de tener que consultar todos los datos y almacenarlos en la memoria de la aplicación cliente.
+                </p>
+                
+                <h2>Características de Indexeddb:</h2>
+                <br>
+                <p>
+                    ➤ <b>Las bases de datos IndexedDB almacenan pares clave-valor: </b>La parte clave-valor se refiere al hecho de que la base de datos almacena datos como 
+                    una colección de pares clave / valor. Este es un método simple de almacenar datos, y se sabe que escala bien.
+                    <br><br>
+                    El par clave-valor es un concepto bien establecido en muchos lenguajes de programación. Los lenguajes de programación normalmente se refieren a una 
+                    clave-valor como una matriz asociativa o estructura de datos. Un valor-clave también se conoce comúnmente como diccionario o hash
+                    <br><br>
+                    Un store de valores-clave o una base de datos de valores-clave es una base de datos simple que usa un arreglo asociativo (piensa en un mapa o diccionario) 
+                    como el modelo de datos fundamental donde cada clave está asociada con un solo valor en una colección. Esta relación se conoce como un par clave-valor.
+                    <br><br>
+                    El valor puede ser cualquier tipo de datos como una imagen, archivo de preferencia del usuario o documento. El valor se almacena como un blob que no requiere 
+                    modelado de datos inicial o definición de esquema.
+                </p>
+
+                <p>
+                    ➤ <b>Es asíncrona: </b>Para no penalizar el rendimiento del cliente, la base de datos IndexedDB funciona de forma asíncrona. Esto nos permite almacenar 
+                    grandes cantidades de datos sin que estemos penalizando a la respuesta de renderizado del navegador. Cuando veamos el API de IndexedDB 
+                    veremos que las respuestas de sus métodos son asíncronas
+                </p>
+
+                <p>
+                    ➤ <b>Es transaccional: </b>El modelo transaccional garantiza la integridad de los datos en caso de que los usuarios abran la aplicación web en dos pestañas/ventanas
+                    al mismo tiempo y realicen la lectura y escritura en la misma base de datos.
+                </p>   
+                
+                <p>
+                    ➤ <b>Restricción de dominio:</b> Una base de datos IndexedDB solo pertenece a un dominio, es por ello que solo podremos acceder al contenido de la información que alberga 
+                    cuando lo operemos desde el dominio al que corresponde. De esta manera mantenemos la seguridad de los datos almacenados.
+                </p>
+
+                <p>
+                    ➤ <b>Gran capacidad de almacenamiento:</b> Ya hemos visto que IndexedDB viene a paliar los límites de almacenamiento que aparecen en las Cookies o en la API WebStorage,
+                     llegando a poder almacenar hasta 250Mb. El almacén de objetos, representado por el objeto IDBObjectStore es el conjunto de datos 
+                     relativos a un concepto. Sería similar a una tabla dentro de una base de datos relacional, dentro del almacén de objetos encontraremos
+                      los datos. Cada uno de los datos es un registro. Lo que caracteriza a cada registro es que tiene una clave asociada.
+                </p>
+                <br>
+                <h2>Operaciones básicas de Indexeddb</h2>
+                <br>
+
+                <p>√ Apertura de una conexión a una base de datos</p>
+                <p>√ Insertar un objeto en el almacén de objetos</p>
+                <p>√ Lectura de datos del almacén de objetos</p>
+                <p>√ Usar un cursor para iterar sobre un conjunto de resultados</p>
+                <p>√ Eliminación de un objeto del almacén de objetos</p>
+                </div>
+
+                
+        <hr>
+        
+                <b>A continuación se muestra un ejemplo real:</b> 
+                        <br>
+                        <br>
+                        <a id="services"></a>
+                        <a href="../DAW/ejemploIndexedDB.html" class="button button5">Ver ejemplo</a>
+            </div>
+        </section>
+
+        <footer class="footer py-4">
+            <hr>
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-4 text-lg-start">Copyright &copy; DAW 2022</div>
+                    <div class="col-lg-4 text-lg-end">
+                        <a class="col-lg-4" >Investigación Aplicada 1</a>
+                        <a class="col-lg-4" >- DAW</a>
+                    </div>
+                    <div class="col-lg-4 text-lg-start">Universidad Don Bosco</div>
+                </div>
+            </div>
+        </footer>
+        <script src="js/scripts.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>
