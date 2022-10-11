@@ -1,6 +1,12 @@
 const button = document.getElementById('button')
 const scoreElement = document.getElementById('score_element')
 
+/**LOCALSTORAGE
+ * setItem('clave', 'valor')
+ * getItem('clave', 'valor')
+ * removeItem('clave') => eliminar el valor almacenado
+ */
+
 if (typeof (localStorage) === 'undefined'){
     console.log ('Su navegador no puede soportar el LocaStorage')
 }
